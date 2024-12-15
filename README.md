@@ -1,6 +1,10 @@
 # NoteNest
 
-NoteNest is a simple note-taking application built using Express, Node.js, and Mongoose.
+NoteNest is a simple note-book application built using Express, Node.js, and Mongoose.
+
+
+![test](https://github.com/user-attachments/assets/5acc11fa-3587-49d9-bba9-c4aef3c9e20a)
+
 
 ## Features
 
@@ -18,7 +22,7 @@ NoteNest is a simple note-taking application built using Express, Node.js, and M
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/notaty.git
+    git clone https://github.com/sohayb-elbakali/NoteNest.git
     ```
 2. Navigate to the project directory:
     ```bash
@@ -41,7 +45,7 @@ NoteNest is a simple note-taking application built using Express, Node.js, and M
 
 1. Start the server:
     ```bash
-    npm start
+    npm run start
     ```
 2. Open your browser and navigate to `http://localhost:your_port_number`
 
