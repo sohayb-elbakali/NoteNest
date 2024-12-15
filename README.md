@@ -22,7 +22,7 @@ NoteNest is a simple note-taking application built using Express, Node.js, and M
     ```
 2. Navigate to the project directory:
     ```bash
-    cd notaty
+    cd NoteNest
     ```
 3. Install dependencies:
     ```bash
