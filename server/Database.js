@@ -3,7 +3,7 @@ const Note = require("./schemas/note");
 
 class Database {
   constructor() {
-    this.Url = "mongodb://localhost:27017/notaty";
+    this.Url = "mongodb://localhost:27017/NoteNest";
   }
 
   connect() {
