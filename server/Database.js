@@ -76,7 +76,9 @@ class Database {
 
   getNotesByTitle(noteTitle) {
     return new Promise((resolve, reject) => {
-      const query = { title: { $regex: new RegExp(noteTitle, "i") } };
+      // Escape special regex characters to prevent NoSQL injection
+      const escapedTitle = noteTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const query = { title: { $regex: new RegExp(escapedTitle, "i") } };
       Note.find(query)
         .then((data) => {
           resolve(data);
