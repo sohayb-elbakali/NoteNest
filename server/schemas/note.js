@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { escapeRegex } = require("../utils/sanitize");
 
 const noteSchema = mongoose.Schema({
   title: { type: String, required: true },
@@ -85,7 +86,7 @@ class Database {
   getNotesByTitle(noteTitle) {
     return new Promise((resolve, reject) => {
       // Escape special regex characters to prevent NoSQL injection
-      const escapedTitle = noteTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const escapedTitle = escapeRegex(noteTitle);
       const query = { title: { $regex: new RegExp(escapedTitle, "i") } };
       Note.find(query)
         .then((data) => {
